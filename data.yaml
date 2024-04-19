@@ -2,12 +2,12 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 1
-names: ['tree']
+nc: 2
+names: ['noVegetation', 'vegetation']
 
 roboflow:
   workspace: test-ithum
-  project: forest-v3
+  project: vegetation-v3
   version: 1
   license: CC BY 4.0
-  url: https://universe.roboflow.com/test-ithum/forest-v3/dataset/1
+  url: https://universe.roboflow.com/test-ithum/vegetation-v3/dataset/1

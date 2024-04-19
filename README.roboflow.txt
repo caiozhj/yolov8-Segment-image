@@ -1,8 +1,8 @@
 
-forest-v3 - v1 2024-04-08 9:10pm
+Vegetation-v3 - v1 2024-04-18 11:41am
 ==============================
 
-This dataset was exported via roboflow.com on April 9, 2024 at 12:10 AM GMT
+This dataset was exported via roboflow.com on April 18, 2024 at 2:41 PM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,8 +17,8 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 8 images.
-Tree are annotated in YOLOv8 format.
+The dataset includes 14 images.
+Vegetation are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
 * Auto-orientation of pixel data (with EXIF-orientation stripping)

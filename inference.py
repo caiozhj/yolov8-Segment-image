@@ -1,24 +1,24 @@
-#  inferência do modelo  previamente treinado em uma nova imagem e exibe visualmente as previsões feitas pelo modelo
-
+import cv2
 from ultralytics import YOLO
 from matplotlib import pyplot as plt
 
-# instancia um novo objeto do yolo carregando os pesos do modelo treinado
-my_new_model = YOLO('/home/caio/PycharmProjects/test_Segmentaion/results/30_epochs-/weights/last.pt')
+# Carrega o modelo YOLO com os pesos treinados
+my_new_model = YOLO('/home/caio/PycharmProjects/test_Segmentaion/results/200_epochs-/weights/last.pt')
 
 # caminho para a nova imagem na qual a detecção de objetos será realizada
-new_image = '/home/caio/PycharmProjects/test_Segmentaion/test.jpg'
+new_image = '/home/caio/PycharmProjects/test_Segmentaion/images/11.jpg'
 
-#previsão de objetos na nova imagem usando o modelo previamente treinado
-new_results = my_new_model.predict(new_image, conf=0.5)
+# previsão de objetos na nova imagem usando o modelo previamente treinado
+new_results = my_new_model.predict(new_image, conf=0.3)
 
 # representação visual das previsões feitas pelo modelo na imagem
 new_result_array = new_results[0].plot()
 plt.figure(figsize=(12, 12))
 plt.imshow(new_result_array)
 
-# Salve a figura em um arquivo
-plt.savefig('predicted_image4.png')
+# Salvar a figura em um arquivo com as cores originais
+# Converter a imagem de RGB para BGR antes de salvar
+image_bgr = cv2.cvtColor(new_result_array, cv2.COLOR_RGB2BGR)
+cv2.imwrite('predicted_1.jpg', image_bgr)
 
-# Exiba o caminho do arquivo
-print("Imagem com previsões salva em predicted_image.png")
+
