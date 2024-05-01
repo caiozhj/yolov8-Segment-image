@@ -1,8 +1,8 @@
 
-Vegetation-v3 - v1 2024-04-18 11:41am
+Veget_segmentation-v - v1 2024-05-01 8:28pm
 ==============================
 
-This dataset was exported via roboflow.com on April 18, 2024 at 2:41 PM GMT
+This dataset was exported via roboflow.com on May 1, 2024 at 11:28 PM GMT
 
 Roboflow is an end-to-end computer vision platform that helps you
 * collaborate with your team on computer vision projects
@@ -17,12 +17,12 @@ visit https://github.com/roboflow/notebooks
 
 To find over 100k other datasets and pre-trained models, visit https://universe.roboflow.com
 
-The dataset includes 14 images.
-Vegetation are annotated in YOLOv8 format.
+The dataset includes 39 images.
+HighVegetation are annotated in YOLOv8 format.
 
 The following pre-processing was applied to each image:
 * Auto-orientation of pixel data (with EXIF-orientation stripping)
-* Resize to 640x640 (Stretch)
+* Resize to 640x640 (Fit within)
 
 No image augmentation techniques were applied.
 

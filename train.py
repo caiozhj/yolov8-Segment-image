@@ -12,7 +12,7 @@ with open("data.yaml", 'r') as stream:
     num_classes = str(yaml.safe_load(stream)['nc'])
 
 # diretório de destino para resultados do treinamento
-project = "/home/caio/PycharmProjects/test_Segmentaion/results"
+project = "/home/naruto/Documents/python/yolov8-Segment-image"
 
 # Define um subdiretório específico para este treinamento
 name = "200_epochs-"
@@ -21,7 +21,7 @@ name = "200_epochs-"
 # treinamento do modelo
 
 # método train do objeto model ( modelo DOCS YOLO).
-results = model.train(data='/home/caio/PycharmProjects/test_Segmentaion/data.yaml',
+results = model.train(data='/home/naruto/Documents/python/yolov8-Segment-image/data.yaml',
                       project=project,
                       name=name, # subdiretório
                       epochs=200,

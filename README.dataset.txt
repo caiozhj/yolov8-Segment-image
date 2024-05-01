@@ -1,5 +1,5 @@
-# Vegetation-v3 > 2024-04-18 11:41am
-https://universe.roboflow.com/test-ithum/vegetation-v3
+# Veget_segmentation-v > 2024-05-01 8:28pm
+https://universe.roboflow.com/test-ithum/veget_segmentation-v
 
 Provided by a Roboflow user
 License: CC BY 4.0

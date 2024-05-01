@@ -2,12 +2,12 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 2
-names: ['noVegetation', 'vegetation']
+nc: 5
+names: ['cultivatedLand', 'highVegetation', 'lowVegetation', 'noVegetation', 'river']
 
 roboflow:
   workspace: test-ithum
-  project: vegetation-v3
+  project: veget_segmentation-v
   version: 1
   license: CC BY 4.0
-  url: https://universe.roboflow.com/test-ithum/vegetation-v3/dataset/1
+  url: https://universe.roboflow.com/test-ithum/veget_segmentation-v/dataset/1
