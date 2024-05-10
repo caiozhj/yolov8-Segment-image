@@ -12,20 +12,21 @@ with open("data.yaml", 'r') as stream:
     num_classes = str(yaml.safe_load(stream)['nc'])
 
 # diretório de destino para resultados do treinamento
-project = "/home/naruto/Documents/python/yolov8-Segment-image"
+project = "/home/inovacai/Documents/caio/yolov8-Segment-image"
 
 # Define um subdiretório específico para este treinamento
-name = "200_epochs-"
+name = "1000_epochs-"
 
 
 # treinamento do modelo
 
 # método train do objeto model ( modelo DOCS YOLO).
-results = model.train(data='/home/naruto/Documents/python/yolov8-Segment-image/data.yaml',
+results = model.train(data='/home/inovacai/Documents/caio/yolov8-Segment-image/data.yaml',
                       project=project,
                       name=name, # subdiretório
-                      epochs=200,
+                      epochs=1000,
                       patience=0, # Define a paciência para o algoritmo de parada antecipada. Neste caso, está definido como 0 para desabilitar a parada antecipada.
                       batch=4, # O tamanho do lote (batch size) usado durante o treinamento, definido como 4.
                       imgsz=800) # tamanho das imagens de entrada
+
 
