@@ -5,13 +5,13 @@ from ultralytics import YOLO
 from pathlib import Path
 
 # Caminho para o modelo treinado
-model_path = '/home/caio/PycharmProjects/test_Segmentaion/results/200_epochs-/weights/last.pt'
+model_path = '/home/naruto/Documents/python/segment-v1/200_epochs-/weights/last.pt'
 
 # Load YOLO model with trained weights
 m = YOLO(model_path)
 
 # Perform prediction
-new_image = '/home/caio/PycharmProjects/test_Segmentaion/images/11.jpg'
+new_image = '/home/naruto/Documents/python/segment-v1/images/img2_2023.jpg'
 res = m.predict(new_image)
 
 # Load the original image
@@ -36,7 +36,7 @@ for r in res:
         isolated = np.dstack([img, b_mask])
 
         # Define output path for the isolated object
-        output_path = f'/home/caio/PycharmProjects/test_Segmentaion/output_images/{img_name}_{label}_isolated.png'
+        output_path = f'/home/naruto/Documents/python/segment-v1/output_images/{img_name}_{label}_isolated.png'
 
         # Save the isolated object with a transparent background
         cv2.imwrite(output_path, isolated)
